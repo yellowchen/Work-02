@@ -1,0 +1,184 @@
+.header {
+    background-color: $light-gray;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 1rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.navigation {
+    height: 100px; //沒有設高的話，畫面縮小時，breadCrumb會飄移
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    .menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        li .menu-link {
+            color: $black;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+    }
+    .breadCrumb {
+        display: none;
+        .bar {
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 6px 0;
+            background-color: $black;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation {
+        .menu {
+            position: fixed;
+            top: 100px;
+            left: -100%;
+            width: 95%;
+            background-color: #fcc;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 5px;
+            
+        }
+        .menu.active {
+            left: 2%;
+        }
+        .breadCrumb {
+            display: block;
+            cursor: pointer;
+        }
+        .breadCrumb.active {
+            .bar:nth-child(1) {
+                transform:translateY(9px) rotate(45deg);
+            }
+            .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .bar:nth-child(3) {
+                transform: translateY(-9px) rotate(-45deg);
+            }
+        }
+    }
+}
+
+.banner {
+    margin-top: 100px;
+    padding: 0 2rem;
+    background: url("https://picsum.photos/1200/1200/?random=1") center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: $ts-a;
+    h1 {
+        font-size: $h1-font-size;
+        small {
+            font-size: $h3-font-size;
+        }
+    }
+    p {
+        font-size: $h5-font-size;
+    }
+}
+
+.nav-effect {
+    padding: 100px 0;  //用來作為跳轉後，上面會擋住的部分
+}
+
+
+//TITLE的設計
+.title {
+    text-align: center;
+    h2 {
+        width: 100%;
+        font-size: $h2-font-size;
+        display: flex;
+        margin-bottom: 2rem;
+    }
+    h2::before, ::after {
+        content: "";
+        width: 0;
+        height: 3px;
+        flex-grow: 1;
+        margin: auto 1rem;
+        background-color: $black;
+        box-shadow: 0 2px 4px #aaa;
+    }
+    P {
+        line-height: $line-height-base;
+        padding: 0 2rem;
+    }
+}
+
+.product {
+    background-color: antiquewhite;
+    .container .p-all {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .p-item {
+            width: 300px;
+            margin: 3rem 1.5rem 0;
+            border: 2px solid $light-gray;
+            border-radius: 5px;
+            p {
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+.service {
+    .container .s-all {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .s-item {
+            width: 300px;
+            border: 1px solid #000;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 3rem 1.5rem 0;
+            .s-item-txt {
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h4 {
+                    text-align: center;
+                    font-size: $h4-font-size;
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+        
+    }
+}
+
+.footer {
+    background-image: $bi_r-r;
+    margin: 0;
+    text-align: center;
+    h3 {
+        font-size: $h3-font-size;
+        margin-bottom: 1.5rem;
+    } 
+    .icon-all a .fa {
+        color: #ddd;
+        font-size: $h3-font-size;
+        padding: .5rem;
+    } 
+}

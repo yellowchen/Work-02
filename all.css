@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: "Limelight", cursive;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.header {
+  background-color: #F5F5F5;
+  height: 100px;
+  line-height: 100px;
+  padding: 0 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.navigation {
+  height: 100px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.navigation .menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.navigation .menu li .menu-link {
+  color: #221E1F;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.navigation .breadCrumb {
+  display: none;
+}
+.navigation .breadCrumb .bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 6px 0;
+  background-color: #221E1F;
+}
+
+@media screen and (max-width: 768px) {
+  .navigation .menu {
+    position: fixed;
+    top: 100px;
+    left: -100%;
+    width: 95%;
+    background-color: #fcc;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .navigation .menu.active {
+    left: 2%;
+  }
+  .navigation .breadCrumb {
+    display: block;
+    cursor: pointer;
+  }
+  .navigation .breadCrumb.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  .navigation .breadCrumb.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .navigation .breadCrumb.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+.banner {
+  margin-top: 100px;
+  padding: 0 2rem;
+  background: url("https://picsum.photos/1200/1200/?random=1") center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: 0 0 10px #ccc;
+}
+.banner h1 {
+  font-size: 60px;
+}
+.banner h1 small {
+  font-size: 32px;
+}
+.banner p {
+  font-size: 20px;
+}
+
+.nav-effect {
+  padding: 100px 0;
+}
+
+.title {
+  text-align: center;
+}
+.title h2 {
+  width: 100%;
+  font-size: 48px;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.title h2::before, .title ::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  flex-grow: 1;
+  margin: auto 1rem;
+  background-color: #221E1F;
+  box-shadow: 0 2px 4px #aaa;
+}
+.title P {
+  line-height: 1.5;
+  padding: 0 2rem;
+}
+
+.product {
+  background-color: antiquewhite;
+}
+.product .container .p-all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product .container .p-all .p-item {
+  width: 300px;
+  margin: 3rem 1.5rem 0;
+  border: 2px solid #F5F5F5;
+  border-radius: 5px;
+}
+.product .container .p-all .p-item p {
+  padding: 1rem;
+}
+
+.service .container .s-all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.service .container .s-all .s-item {
+  width: 300px;
+  border: 1px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3rem 1.5rem 0;
+}
+.service .container .s-all .s-item .s-item-txt {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service .container .s-all .s-item .s-item-txt h4 {
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 1rem;
+}
+
+.footer {
+  background-image: linear-gradient(0deg, #cc4380, #fb6c75);
+  margin: 0;
+  text-align: center;
+}
+.footer h3 {
+  font-size: 32px;
+  margin-bottom: 1.5rem;
+}
+.footer .icon-all a .fa {
+  color: #ddd;
+  font-size: 32px;
+  padding: 0.5rem;
+}/*# sourceMappingURL=all.css.map */

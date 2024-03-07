@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnePage2</title>
+    <link rel="stylesheet" href="all.css">
+
+</head>
+<body>
+    
+    <div class="header">
+        <nav class="navigation">
+            <ul class="menu">
+                <li><a href="#intro" class="menu-link">About Us</a></li>
+                <li><a href="#product" class="menu-link">Product</a></li>
+                <li><a href="#service" class="menu-link">Service</a></li>
+                <li><a href="#footer" class="menu-link">Contact Us</a></li>
+            </ul>
+            <div class="breadCrumb">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </div>
+
+    <div class="banner">
+        <h1>
+            Love and Peace or War
+            <small>To be or not to be</small>
+        </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eaque vel fugit. Ipsa, expedita hic nostrum rerum aspernatur quis tempora.</p>
+    </div>
+
+    <div class="intro nav-effect" id="intro">
+        <div class="container">
+            <div class="title">
+                <h2>LOVE</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis impedit maxime optio expedita ducimus sapiente, vero, natus corrupti, itaque inventore assumenda libero? Numquam dolore eligendi, minima nulla suscipit iure pariatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores rem aperiam id harum dolorum fugiat voluptatibus et porro est. Iure culpa odit voluptatum! Vel vero velit modi aperiam, eveniet nam.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="product nav-effect" id="product">
+        <div class="container">
+            <div class="title">
+                <h2>Something Good</h2>
+            </div>
+            <div class="p-all">
+                <div class="p-item">
+                    <img src="https://picsum.photos/300/400/?random=11">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, cum?</p>
+                </div>
+                <div class="p-item">
+                    <img src="https://picsum.photos/300/400/?random=12">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, cum?</p>
+                </div>
+                <div class="p-item">
+                    <img src="https://picsum.photos/300/400/?random=13">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, cum?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service nav-effect" id="service">
+        <div class="container">
+            <div class="title">
+                <h2>Something Bad</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam expedita, consequuntur magnam at repudiandae aspernatur in atque ab voluptates qui rem placeat? Dolorum, quibusdam cum!</p>
+            </div>
+            <div class="s-all">
+                <div class="s-item">
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    <div class="s-item-txt">
+                        <h4>AAA</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsum corrupti aliquid at voluptate error neque labore. Laborum non qui esse eius officia possimus, dolore quos cupiditate enim. Voluptatum, doloremque.</p>
+                    </div>
+                </div>
+                <div class="s-item">
+                    <img src="https://picsum.photos/300/200/?random=11">
+                    <div class="s-item-txt">
+                        <h4>BBB</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsum corrupti aliquid at voluptate error neque labore. Laborum non qui esse eius officia possimus, dolore quos cupiditate enim. Voluptatum, doloremque.</p>
+                    </div>
+                </div>
+                <div class="s-item">
+                    <img src="https://picsum.photos/300/200/?random=12" class="theOne">
+                    <div class="s-item-txt">
+                        <h4>CCC</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsum corrupti aliquid at voluptate error neque labore. Laborum non qui esse eius officia possimus, dolore quos cupiditate enim. Voluptatum, doloremque.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="footer nav-effect" id="footer">
+        <h3>Contact Us</h3>
+        <div class="icon-all">
+            <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+
+    <script>
+        const bread = document.querySelector(".breadCrumb");
+        const menu = document.querySelector(".menu");
+
+        bread.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+            bread.classList.toggle("active");
+            menu.classList.toggle("active");
+        }
+
+        const link = document.querySelectorAll(".menu-link");
+        
+        link.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+            bread.classList.remove("active");
+            menu.classList.remove("active");
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>
